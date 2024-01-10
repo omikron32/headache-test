@@ -2,6 +2,7 @@
     <head>
         <title>Document</title>
         <link rel="stylesheet" href="css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     </head>
     <body class="page">
@@ -11,21 +12,26 @@
                     <img class="logo__img" src="img/logo.png" alt="">
                     <span class="logo__text">Global</span>
                 </a>
-                <ul class="menu">
-                    <li class="menu__item">
-                        <a href="#" class="menu__link menu__link--active">Mobile Top Up</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">About</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Rate</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Help</a>
-                    </li>
-                </ul>
-                <button class="header-content__button">Sign up</button>
+                <div class="header-content__info">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link menu__link--active">Mobile Top Up</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Rate</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Help</a>
+                        </li>
+                    </ul>
+                    <button class="header-content__button">Sign up</button>
+                </div>
+                <button class="mobile-only header-gamburger">
+                    <span class="header-gamburger__line"></span>
+                </button>
             </div>
         </header>
         <main class="main">
@@ -40,12 +46,12 @@
                     <span id="request" class="main-content__subtitle">Loading...</span>
 
                     <button class="main-content__button">Get Started</button>
-                    <div class="main-content-search">
+                    <form class="main-content-search">
                         <input type="text" class="main-content-search__input" placeholder="Where do you want to call?">
                         <button class="main-content-search__button">
                             <img src="img/search.svg" alt="">
                         </button>
-                    </div>
+                    </form>
                     <div class="main-content-info">
                         <div class="main-content-info__users">
                             <img src="img/man1.png" class="main-content-info__img" alt="">
@@ -68,11 +74,11 @@
                         </div>
                         <div class="illustration__ellipse"></div>
                         <div class="illustration__thin">
-                            <div class="flag flag--gb" alt=""></div>
-                            <div class="flag flag--india" alt=""></div>
-                            <div class="flag flag--italia" alt=""></div>
-                            <div class="flag flag--india-2" alt=""></div>
-                            <div class="flag flag--india-3" alt=""></div>
+                            <img class="flag flag1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/360px-Flag_of_India.svg.png" alt="">
+                            <div class="flag flag2" alt=""></div>
+                            <div class="flag flag3" alt=""></div>
+                            <img class="flag flag4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/360px-Flag_of_India.svg.png" alt="">
+                            <img class="flag flag5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/360px-Flag_of_India.svg.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -94,5 +100,24 @@
                 console.log('Error:', error);
             }
         });
+        // Ждем 3 секунды после загрузки страницы
+        setTimeout(function() {
+            $('.flag1').addClass('flag--india-2');
+        }, 3000);
+        setTimeout(function() {
+            $('.flag2').addClass('flag--gb');
+        }, 3400);
+        setTimeout(function() {
+            $('.flag3').addClass('flag--italia');
+        }, 3800);
+        setTimeout(function() {
+            $('.flag4').addClass('flag--india');
+        }, 4200);
+        setTimeout(function() {
+            $('.flag5').addClass('flag--india-3');
+        }, 4600);
+        setTimeout(function() {
+            $('.illustration__thin').addClass('illustration__thin--animation');
+        }, 4600);
     });
 </script>
