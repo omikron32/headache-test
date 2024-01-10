@@ -1,6 +1,18 @@
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .illustration {
   position: relative;
-
+  display: flex;
+  justify-content: center;
+  
   &__women {
     position: relative;
     width: em(271, $fz);
@@ -11,7 +23,7 @@
 
   &__ellipse {
     position: absolute;
-    top: 0;
+    top: em(80, $fz);
     z-index: 0;
     width: em(280, $fz);
     height: em(280, $fz);
@@ -21,10 +33,49 @@
 
   &__thin {
     position: absolute;
-    top: 0;
+    top: em(-40, $fz);
     border-radius: 50%;
     width: em(450, $fz);
     height: em(450, $fz);
     border: 2px #E8E8E8 solid;
+    animation: rotation 10s infinite ease-in-out;
   }
 }
+
+
+
+.flag {
+  border: em(10, $fz) hsl(0, 0%, 100%) solid;
+  background: #000;
+  position: absolute;
+  width: em(40, $fz);
+  height: em(40, $fz);
+  border-radius: 50%;
+
+
+  &--gb {
+    left: em(-20, $fz);
+    top: 50%;
+  }
+
+  &--italia {
+    left: 50px;
+    top: 40px;
+  }
+
+  &--india {
+    left: 400px;
+    top: 310px;
+  }
+
+  &--india-2 {
+    left: 240px;
+    top: -15px;
+  }
+
+  &--india-3 {
+    left: 380px;
+    top: 60px;
+  }
+}
+

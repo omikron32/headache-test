@@ -5,6 +5,7 @@
 }
 
 button {
+  cursor: pointer;
   font-family: 'Poppins';
 }
 
@@ -31,7 +32,6 @@ button {
     border-radius: em(20, $fz);
     padding: em(8 24, $fz);
     color: hsl(0, 0%, 100%);
-    cursor: pointer;
   }
 }
 
@@ -144,7 +144,7 @@ button {
     height: em(55, $fz);
     border-radius: 50%;
     border: none;
-    color: #fff;
+    color: hsl(0, 0%, 100%);
     background-color: hsl(144, 44%, 50%);
   }
 }
