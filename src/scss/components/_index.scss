@@ -3,6 +3,7 @@
   font-family: 'Poppins';
   padding-top: em(30, $fz);
   padding-bottom: em(30, $fz);
+  overflow-x: hidden;
 
   @media (min-width:1921px ) {
     font-size: 0.8333333vw;
@@ -54,6 +55,11 @@ button {
     border-radius: em(20, $fz);
     padding: em(8 24, $fz);
     color: hsl(0, 0%, 100%);
+
+    @media (max-width: 1000px) {
+      margin-top: em(40, $fz);
+      margin-left: em(8, $fz);
+    }
   }
 
   &__info {
@@ -81,6 +87,7 @@ button {
     &--open {
       @media screen and (max-width: 1000px) {
         transform: translateX(0);
+        box-shadow: em(10 10 45, $fz) hsl(0, 0%, 0%);
       }
     }
   }
@@ -120,6 +127,8 @@ button {
   text-decoration: none;
   
   &__img {
+    width: em(40, $fz);
+    height: em(40, $fz);
     margin-right: em(8, $fz);
   }
   
@@ -208,6 +217,7 @@ button {
     line-height: em(26, $fz);
     font-weight: 500;
     margin-bottom: em(30, $fz);
+    max-width: em(444, $fz);
   }
   
   &__button {
@@ -232,16 +242,24 @@ button {
   margin-bottom: em(40, $fz);
 
   &__input {
+    $fz: 16;
+    font-size: em($fz, $fz_base);
     border: none;
     width: 100%;
     height: em(62, $fz);
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     border-radius: em(100, $fz);
     padding-left: em(40, $fz);
     padding-right: em(70, $fz);
   }
+  
+  &__img {
+    width: em(30, $fz);
+  }
 
   &__button {
+    $fz: 16;
+    font-size: em($fz, $fz_base);
     position: absolute;
     right: em(10, $fz);
     width: em(55, $fz);

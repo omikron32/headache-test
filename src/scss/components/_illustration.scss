@@ -16,6 +16,10 @@
   @media (max-width: 1000px) {
      font-size: 12px;
   }
+
+  @media (max-width: 480px) {
+    font-size: 8px;
+  }
   
   &__women {
     position: relative;
@@ -55,7 +59,6 @@
 
 .flag {
   border: em(10, $fz) hsl(0, 0%, 100%) solid;
-  background: #000;
   position: absolute;
   width: em(40, $fz);
   height: em(40, $fz);

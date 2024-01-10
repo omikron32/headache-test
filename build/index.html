@@ -43,14 +43,12 @@
                         PIN or <span class="orange">Top Up</span> <br/>
                         With Bank Transfer
                     </span>
-
                     <span id="request" class="main-content__subtitle">Loading...</span>
-
                     <button class="main-content__button">Get Started</button>
                     <form class="main-content-search">
-                        <input type="text" class="main-content-search__input" placeholder="Where do you want to call?">
+                        <input type="text" class="main-content-search__input" minlength="4" maxlength="12" placeholder="Where do you want to call?">
                         <button class="main-content-search__button">
-                            <img src="img/search.svg" alt="">
+                            <img class="main-content-search__img" src="img/search.svg" alt="">
                         </button>
                     </form>
                     <div class="main-content-info">
@@ -75,11 +73,11 @@
                         </div>
                         <div class="illustration__ellipse"></div>
                         <div class="illustration__thin">
-                            <img class="flag flag1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/360px-Flag_of_India.svg.png" alt="">
-                            <div class="flag flag2" alt=""></div>
-                            <div class="flag flag3" alt=""></div>
-                            <img class="flag flag4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/360px-Flag_of_India.svg.png" alt="">
-                            <img class="flag flag5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/360px-Flag_of_India.svg.png" alt="">
+                            <img class="flag flag1" src="img/india.png" alt="">
+                            <img class="flag flag2" alt="" src="img/gb.png">
+                            <img class="flag flag3" alt="" src="img/italia.png">
+                            <img class="flag flag4" src="img/india.png" alt="">
+                            <img class="flag flag5" src="img/india.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -122,6 +120,14 @@
 
         $('.js-mobile-menu').click(function () {
             $('.header-content__info').toggleClass('header-content__info--open');
+        });
+
+        $('.main-content-search__input').on('keypress', function(e) {
+            var forbiddenChars = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
+
+            if (forbiddenChars.includes(String.fromCharCode(e.which))) {
+                e.preventDefault();
+            }
         });
     });
 </script>

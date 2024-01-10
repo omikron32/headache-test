@@ -72,11 +72,11 @@ gulp.task('svg-sprite', function () {
 var favicons = require('gulp-favicons');
 
 gulp.task('favicon', function () {
-    return gulp.src('src/img/logo.png')
+    return gulp.src('src/img/logo.svg')
     .pipe(
         favicons({
-            appName: 'Query',
-            appShortName: 'Qyery',
+            appName: 'Test',
+            appShortName: 'Test',
             appDescription: 'This is my application',
             developerName: '',
             developerURL: '',
