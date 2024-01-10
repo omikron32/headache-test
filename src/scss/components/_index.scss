@@ -101,6 +101,7 @@ button {
     font-size: em($fz, $fz_base);
     display: block;
     color: hsl(0, 0%, 49%);
+    line-height: em(26, $fz);
     font-weight: 500;
     margin-bottom: em(30, $fz);
   }
@@ -132,6 +133,8 @@ button {
     height: em(62, $fz);
     background-color: #fff;
     border-radius: em(100, $fz);
+    padding-left: em(40, $fz);
+    padding-right: em(70, $fz);
   }
 
   &__button {
@@ -157,11 +160,41 @@ button {
 
   &__text {
     color: hsl(0, 0%, 44%);
+    font-weight: 400;
+  }
+
+  &__link {
+    color: hsl(20, 98%, 67%);
+    font-weight: 500;
+    text-decoration: none;
   }
 
   &__img {
+    position: relative;
+    width: em(38, $fz);
+    height: em(38, $fz);
+    z-index: 2;
+
     &:not(:first-child) {
       margin-left: em(-16, $fz);
     }
+  }
+
+  &__button {
+    $fz: 20;
+    font-size: em($fz, $fz_base);
+    position: relative;
+    z-index: 1;
+    margin-left: em(-16, $fz);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: em(32, $fz);
+    height: em(32, $fz);
+    color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    border: 3px solid hsl(0, 0%, 100%);
+    background-color: hsl(20, 100%, 64%);
   }
 }

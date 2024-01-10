@@ -1,0 +1,30 @@
+.illustration {
+  position: relative;
+
+  &__women {
+    position: relative;
+    width: em(271, $fz);
+    height: em(557, $fz);
+    background-image: url('/img/women.png');
+    z-index: 1;
+  }
+
+  &__ellipse {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: em(280, $fz);
+    height: em(280, $fz);
+    border-radius: 50%;
+    background-color: hsl(144, 44%, 50%);
+  }
+
+  &__thin {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    width: em(450, $fz);
+    height: em(450, $fz);
+    border: 2px #E8E8E8 solid;
+  }
+}
