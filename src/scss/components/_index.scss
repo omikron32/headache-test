@@ -64,22 +64,52 @@ button {
     z-index: 10;
 
     @media screen and (max-width: 1000px) {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: em(20, $fz);
       height: 100vh;
-      width: 80vw;
+      width: em(280, $fz);
+      padding-top: em(50, $fz);
       position: fixed;
       top: 0;
       right: 0;
       transform: translateX(100%);
       background: hsl(0, 0%, 100%);
-      flex-direction: column-reverse;
       gap: em(10, $fz);
-      justify-content: flex-end;
     }
 
     &--open {
       @media screen and (max-width: 1000px) {
         transform: translateX(0);
       }
+    }
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    width: em(30, $fz);
+    height: em(30, $fz);
+    position: absolute;
+    top: em(15, $fz);
+    right: em(15, $fz);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      display: block;
+      height: 1px;
+      background-color: #2d2d2d;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
     }
   }
 }
@@ -107,12 +137,17 @@ button {
 
   @media screen and (max-width: 1000px) {
     flex-direction: column;
+    gap: em(30, $fz);
   }
 
   &__link {
     position: relative;
     color: hsl(0, 0%, 29%);
     text-decoration: none;
+
+    @media screen and (max-width: 1000px) {
+      padding-left: em(30, $fz);
+    }
 
     &:hover,
     &--active {
@@ -125,6 +160,12 @@ button {
         left: 50%;
         transform: translateX(-50%);
         background-color: hsl(21, 95%, 70%);
+
+        @media screen and (max-width: 1000px) {
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
     }
   }

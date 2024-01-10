@@ -8,7 +8,7 @@
     <body class="page">
         <header class="header">
             <div class="header-content container">
-                <a href="#" class="logo">
+                <a href="/" class="logo">
                     <img class="logo__img" src="img/logo.png" alt="">
                     <span class="logo__text">Global</span>
                 </a>
@@ -28,8 +28,9 @@
                         </li>
                     </ul>
                     <button class="header-content__button">Sign up</button>
+                    <button class="header-content__close js-mobile-menu mobile-only"></button>
                 </div>
-                <button class="mobile-only header-gamburger">
+                <button class="header-gamburger mobile-only js-mobile-menu">
                     <span class="header-gamburger__line"></span>
                 </button>
             </div>
@@ -100,7 +101,6 @@
                 console.log('Error:', error);
             }
         });
-        // Ждем 3 секунды после загрузки страницы
         setTimeout(function() {
             $('.flag1').addClass('flag--india-2');
         }, 3000);
@@ -119,5 +119,9 @@
         setTimeout(function() {
             $('.illustration__thin').addClass('illustration__thin--animation');
         }, 4600);
+
+        $('.js-mobile-menu').click(function () {
+            $('.header-content__info').toggleClass('header-content__info--open');
+        });
     });
 </script>
