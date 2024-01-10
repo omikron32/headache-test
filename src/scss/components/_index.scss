@@ -203,10 +203,14 @@ button {
     $fz: 48;
     font-size: em($fz, $fz_base);
     display: block;
-    color: #2d2d2d;
+    color: hsl(0, 0%, 18%);
     font-weight: 700;
     margin-bottom: em(10, $fz);
     line-height: em(65, $fz);
+
+    @media (max-width: 1000px) {
+      text-align: center;
+    }
   }
 
   &__subtitle {
@@ -218,6 +222,10 @@ button {
     font-weight: 500;
     margin-bottom: em(30, $fz);
     max-width: em(444, $fz);
+
+    @media (max-width: 1000px) {
+      max-width: 100%;
+    }
   }
   
   &__button {
